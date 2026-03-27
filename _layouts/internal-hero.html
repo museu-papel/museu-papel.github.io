@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<div class="internal-page">
+
+  <!-- HERO COMPACTO -->
+  <section class="internal-hero">
+    
+    <div class="internal-hero-text">
+      <h1>{{ page.title }}</h1>
+
+      {% if page.excerpt %}
+        <p class="lead">{{ page.excerpt }}</p>
+      {% endif %}
+    </div>
+
+    {% if page.hero_image %}
+    <div class="internal-hero-image">
+      <img src="{{ page.hero_image }}" alt="">
+    </div>
+    {% endif %}
+
+  </section>
+
+  <!-- CONTEÚDO -->
+  <section class="internal-content">
+    {{ content }}
+  </section>
+
+</div>

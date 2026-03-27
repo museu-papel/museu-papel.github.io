@@ -1,0 +1,40 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>{{ page.hero.title }}</h1>
+      <p>{{ page.hero.subtitle }}</p>
+      {% if page.hero.button_url %}
+        <a href="{{ page.hero.button_url }}" class="btn">
+          {{ page.hero.button_label }}
+        </a>
+      {% endif %}
+    </div>
+
+    <div class="hero-image">
+      <img src="{{ page.hero.image }}" alt="">
+    </div>
+  </section>
+
+  <!-- SECTIONS -->
+  {% for section in page.sections %}
+  <section class="split {% if section.reverse %}reverse{% endif %}">
+    
+    <div class="text">
+      <h2>{{ section.title }}</h2>
+      <p>{{ section.text }}</p>
+    </div>
+
+    <div class="image">
+      <img src="{{ section.image }}" alt="">
+    </div>
+
+  </section>
+  {% endfor %}
+
+</div>

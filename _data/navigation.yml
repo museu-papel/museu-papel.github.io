@@ -1,0 +1,7 @@
+main:
+  - title: "Início"
+    url: "/"
+  - title: "Inscrição de Bolsistas"
+    url: "/bolsistas/"
+  - title: "Caixa de Luzes"
+    url: "/caixa-luzes/"

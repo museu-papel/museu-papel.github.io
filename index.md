@@ -7,7 +7,7 @@ hero:
   image: "/assets/images/geral.png"
 
 header:
-  og_image: "https://museu-papel.github.io/assets/images/geral-preview.png"
+  og_image: "https://museu-papel.github.io/assets/images/geral-preview.jpg"
 
 sections:
   - title: "Papel, o representante"

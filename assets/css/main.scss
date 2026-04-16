@@ -242,86 +242,148 @@ p {
   .cards {
     grid-template-columns: 1fr;
   }
+}
 
-  /* ================================
-    📄 INTERNAL HERO
-  ================================ */
+/* ================================
+   📦 HERO INTERNO
+================================ */
 
-  .internal-hero {
-    display: flex;
-    align-items: center;
-    gap: 4rem;
-    margin: 4rem 0 3rem;
+.internal-hero-inner {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.internal-hero-inner.reverse {
+  flex-direction: row-reverse;
+}
+
+/* 50% garantido */
+
+.internal-hero-image,
+.internal-hero-text {
+  flex: 1 1 50%;
+  min-width: 0;
+}
+
+/* imagem */
+
+.internal-hero-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 8px;
+}
+
+/* texto */
+
+.internal-hero-text {
+  min-width: 0; /* CRÍTICO: evita overflow em flexbox */
+}
+
+.internal-hero-text h1 {
+  font-size: 2.4rem;
+  margin-bottom: 0.8rem;
+
+  /* evita palavras estourando layout */
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.internal-hero-text .lead {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ================================
+   ✨ DIFERENCIAÇÃO VISUAL EXTRA
+================================ */
+
+/* leve sombra para destacar o bloco */
+
+.internal-hero-box {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* leve detalhe geométrico opcional */
+
+.internal-hero-box::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: #e63946;
+  opacity: 0.05;
+  top: -20px;
+  right: -20px;
+  border-radius: 12px;
+}
+
+/* garantir posicionamento correto */
+
+.internal-hero-box {
+  position: relative;
+  overflow: hidden;
+}
+
+/* ================================
+   🖼️ FLOAT IMAGES (correto)
+================================ */
+
+.internal-content img.float-right {
+  float: right;
+  margin: 0 0 1.5rem 2rem;
+  max-width: 300px;
+}
+
+.internal-content img.float-left {
+  float: left;
+  margin: 0 2rem 1.5rem 0;
+  max-width: 300px;
+}
+
+/* limpar */
+
+.internal-content::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* ================================
+   📱 RESPONSIVO
+================================ */
+
+@media (max-width: 900px) {
+  .internal-hero-inner {
+    flex-direction: column;
+    text-align: center;
   }
 
+  .internal-hero-image,
   .internal-hero-text {
-    flex: 0 0 60%;
+    flex: 1;
+    max-width: 100%;
   }
+}
 
-  .internal-hero-image {
-    flex: 0 0 40%;
-  }
+/* ================================
+   🧹 CLEAR FLOAT (quebra de fluxo)
+================================ */
 
-  .internal-hero-image img {
-    width: 100%;
-    border-radius: 8px;
-  }
+.clear {
+  clear: both;
+}
 
-  .internal-content {
-    max-width: 800px;
-  }
+/* versão com espaço extra (opcional) */
 
-  /* ================================
-    🖼️ IMAGENS NO TEXTO (Markdown)
-  ================================ */
+.clear-space {
+  clear: both;
+  margin-top: 2rem;
+}
 
-  /* direita */
-  .internal-content img[alt^="right"] {
-    float: right;
-    margin: 0 0 1.5rem 2rem;
-    max-width: 300px;
-  }
-
-  /* esquerda */
-  .internal-content img[alt^="left"] {
-    float: left;
-    margin: 0 2rem 1.5rem 0;
-    max-width: 300px;
-  }
-
-  /* estilo geral */
-  .internal-content img {
-    border-radius: 8px;
-  }
-
-  /* limpar floats */
-  .internal-content::after {
-    content: "";
-    display: block;
-    clear: both;
-  }
-
-  /* ================================
-    📱 RESPONSIVO
-  ================================ */
-
-  @media (max-width: 900px) {
-    .internal-hero {
-      flex-direction: column;
-      text-align: center;
-    }
-
-    .internal-content {
-      max-width: 100%;
-    }
-
-    /* remove float no mobile */
-    .internal-content img[alt^="right"],
-    .internal-content img[alt^="left"] {
-      float: none;
-      display: block;
-      margin: 1.5rem auto;
-      max-width: 100%;
-    }
-  }
+hr.clear {
+  border: none;
+  clear: both;
+  margin: 2rem 0;
 }

@@ -3,5 +3,7 @@ main:
     url: "/"
   - title: "Inscrição de Bolsistas"
     url: "/bolsistas/"
+  - title: "Orangerie"
+    url: "/orangerie/"
   - title: "Caixa de Luzes"
     url: "/caixa-luzes/"

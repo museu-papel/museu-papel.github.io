@@ -6,6 +6,9 @@ hero:
   subtitle: "O papel é um material fugaz, mas é também: o mais acessível, o mais portátil e o primeiro meio, ou material para produção e difusão, com que todos têm contato desde a infância. Portanto, o papel é um agente democrático de materialização e comunicação de ideias, acessível para diferentes grupos sociais."
   image: "/assets/images/geral.png"
 
+header:
+  og_image: "https://museu-papel.github.io/assets/images/geral-preview.png"
+
 sections:
   - title: "Papel, o representante"
     text: "Claro, nem tudo é só de papel. Ele é o representante de uma categoria de coisas à mão, baratas, reutilizadas, como aqueles frascos de azeitonas ou garrafas plásticas. Assim é esta Orangerie de papel."

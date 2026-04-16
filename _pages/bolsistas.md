@@ -6,6 +6,9 @@ layout: internal-hero
 hero_image: /assets/images/makerspace.png
 
 excerpt: "Estamos buscando pioneiros para dar os primeiros passos do Museu de Papel."
+
+header:
+  og_image: "https://museu-papel.github.io/assets/images/geral-preview.png"
 ---
 
 Este é o primeiro programa de bolsistas do projeto. Ele chama-se Ciência de Papel e está voltado à produção de um curso EaD para a formação de agentes de difusão científica. Os bolsistas atuarão no trabalho de preparação desse curso. Para se candidatar, é necessário ser aluno regular da UNICAMP.
